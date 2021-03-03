@@ -140,19 +140,20 @@ def work(dam, cache):
     project_lab = []
     project_prod = []
 
-    count = 0
     for ds in dss:
         if cache.contains(ds['location']):
+            print("Skipping " + ds['location'])
             continue
-        cache.add(ds['location'])
-        if 'LoanApproval' in ds['location']:
-            if '2020' not in ds['location']:
-                project_lab.append(ds)
-            elif '2020' in ds['location']:
-                project_prod.append(ds)
-            count += 1
-            if count == 10:
-                break
+        else:
+            if 'LoanApproval' in ds['location']:
+                if '2020' not in ds['location']:
+                    project_lab.append(ds)
+                elif '2020' in ds['location']:
+                    project_prod.append(ds)
+                print("Including " + ds['location'])
+                cache.add(ds['location'])
+            else:
+                print("Excluding " + ds['location'])
 
     prod = {}
     for ds in project_prod:
@@ -172,7 +173,7 @@ class Cache(object):
         try:
             with open(self.cache_path, "r") as c:
                 for l in c.readlines():
-                    self.cache.add(l)
+                    self.cache.add(l.strip())
         except FileNotFoundError as e:
             pass
 
