@@ -8,8 +8,8 @@ logo: /img/jkan.png
 jkan_theme: Default
 
 # Authentication
-github_client_id: 
-gatekeeper_host: 
+github_client_id: f1dc1ac2da0fffd8063d
+gatekeeper_host: https://kensu-dim-demo.herokuapp.com
 
 # Dataset schema
 schema: default
