@@ -5,7 +5,6 @@ file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/gold_matrix.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/consolidated_data.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/credit
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/default
-file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/incomes
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/profile
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/output/decisiontree_1st/h2o_binaries/decisiontree_1st
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/output/decisiontree_2nd/h2o_binaries/decisiontree_2nd

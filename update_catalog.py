@@ -166,6 +166,12 @@ def work(dam, cache):
 
     dam.create_file_multiple(prod)
 
+    import subprocess
+    subprocess.call(["git", "pull", "origin", "gh-pages"])
+    subprocess.call(["git", "add", "."])
+    subprocess.call(["git", "commit", "-m", "update catalog"])
+    subprocess.call(["git", "push", "origin", "gh-pages"])
+
 class Cache(object):
     def __init__(self):
         self.cache_path = ".cache.txt"
