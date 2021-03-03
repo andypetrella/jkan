@@ -105,3 +105,4 @@ file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/gold_
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/income_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/personal_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/prediction
+file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/incomes
