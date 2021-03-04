@@ -1,6 +1,6 @@
 ---
 schema: chicago
-title: h2o_binaries/decisiontree_2nd
+title: h2o_binaries decisiontree_2nd
 organization: Lab
 notes: Used in 1 lineage(s)
 resources:

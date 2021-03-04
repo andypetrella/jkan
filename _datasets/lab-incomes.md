@@ -1,6 +1,6 @@
 ---
 schema: chicago
-title: lab/incomes
+title: lab incomes
 organization: Lab
 notes: Used in 1 lineage(s)
 resources:
