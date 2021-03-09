@@ -194,17 +194,11 @@ class Cache(object):
 
 import time, threading
 def main():
-    from timer import Timer
-    t = Timer()
-
     dam = DAM()
     cache = Cache()
     def run():
         print("Running at " + str(time.ctime()))
-        t.start()
         work(dam, cache)
-        t.stop()
-
         print("Done at " + str(time.ctime()))
         period_in_seconds = 10
         threading.Timer(period_in_seconds, run).start()
