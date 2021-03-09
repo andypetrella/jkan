@@ -66,7 +66,7 @@ class DAM(object):
             notes = 'Used in '+str(data['incomingLineages']+data['outgoingLineages'])+' lineage(s)'
             name = naming
             format = data['format']
-            url = self.url_for_ds(data['uuid'])
+            url = self.url_for_ds(ds['uuid'])
 
             self._wl(md_file, "---") \
                             ("schema: chicago") \
@@ -127,7 +127,7 @@ class DAM(object):
                     data = pds[element['uuid']]
                     name = data['name']
                     format = data['format']
-                    url = self.url_for_ds(data['uuid'])
+                    url = self.url_for_ds(element['uuid'])
                     
                     self._wl(md_file, '  - name: '+name+' \n    url: '+url+' \n    format : '+format)
 
