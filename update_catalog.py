@@ -147,6 +147,7 @@ def work(dam, cache):
             print("Skipping " + ds['location'])
             continue
         else:
+            if '' in 
             if 'LoanApproval' in ds['location']:
                 if '2020' not in ds['location']:
                     project_lab.append(ds)
