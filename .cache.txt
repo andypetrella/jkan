@@ -3,7 +3,6 @@ source5 (demodb) :: Tableau Datasource :: kensuintegration site :: BBL_POC_Workf
 Tableau_Dashboard / Sheet1 / PredictMonth :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
 demodb :: Tableau Datasource :: kensuintegration site :: Loan Acceptance Product
 Tableau_Dashboard / Sheet3 / Sheet 3 :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
-DemoLive / Sheet1 / Sheet 1 :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
 source5 (demodb) :: Tableau Datasource :: kensuintegration site :: test mysql 33
 mysql://mysql-kensu-demo.usnek.com:3306/demodb.customers
 customers (demodb) :: Tableau Datasource :: kensuintegration site :: Loan Acceptance Product
