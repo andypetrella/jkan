@@ -100,6 +100,8 @@ class DAM(object):
                         for field in structure['schema']:
                             if field['columnName'] not in fields:
                                 fields.append(field['columnName'])
+                    # FIXME FOR THE DEMO - PERF - WE STOP AFTER THE FIRST SCHEMA
+                    # break
 
                 schema = '['+','.join(fields)+']'
                 
