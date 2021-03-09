@@ -1,6 +1,3 @@
-from mdutils.mdutils import MdUtils
-from mdutils import Html
-
 class DAM(object):
     def __init__(self):
         import urllib3
@@ -12,7 +9,6 @@ class DAM(object):
 
         self.cookie = self.get_cookie()
 
-
     def get_cookie(self):
         import requests
         session = requests.Session()
@@ -22,20 +18,21 @@ class DAM(object):
         cookie = session.cookies
         return cookie
 
-    def get_datasources(self):
+    def send_http(self, path):
         import requests
-        v = requests.get(self.URL+"/api/services/v1/resources/datasources", cookies=self.cookie,verify=False)
+        v = requests.get(self.URL+path, cookies=self.cookie,verify=False)
+        print("[timing]["+path+"]"+str(v.elapsed.total_seconds()))
         return v.json()
+
+
+    def get_datasources(self):
+       return self.send_http("/api/services/v1/resources/datasources")
 
     def get_datasource(self, dsId):
-        import requests
-        v = requests.get(self.URL+"/api/services/v1/resources/datasource/%s" %dsId,cookies=self.cookie,verify=False)
-        return v.json() 
+       return self.send_http("/api/services/v1/resources/datasource/"+dsId)
 
     def get_schema(self, schemaId):
-        import requests
-        v = requests.get(self.URL+"/api/services/v1/resources/schema/%s" %schemaId,cookies=self.cookie,verify=False)
-        return v.json()
+       return self.send_http("/api/services/v1/resources/schema/"+schemaId)
 
     def _wl(self, f, s):
         f.write(s)
