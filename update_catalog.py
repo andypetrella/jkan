@@ -197,10 +197,13 @@ def main():
     dam = DAM()
     cache = Cache()
     def run():
-        print("Running at " + str(time.ctime()))
-        work(dam, cache)
-        print("Done at " + str(time.ctime()))
-        period_in_seconds = 10
+        try:
+            print("Running at " + str(time.ctime()))
+            work(dam, cache)
+            print("Done at " + str(time.ctime()))
+            period_in_seconds = 10
+        except(e):
+            pass
         threading.Timer(period_in_seconds, run).start()
     run()
 
