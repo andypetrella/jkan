@@ -44,7 +44,7 @@ class DAM(object):
     def create_file(self, ds):    
         data = self.get_datasource(ds['uuid'])
         
-        naming = data['name'].replace('/','-')
+        naming = data['name'].replace('/','-').replace(' ','-').replace(':','-')
         
         with open("_datasets/"+naming+".md","w+") as md_file:
             fields = []
@@ -58,10 +58,10 @@ class DAM(object):
                         
 
             schema ='['+','.join(fields)+']'
-            title = data['name']
+            title = naming
             organization = 'Lab'
             notes = 'Used in '+str(data['incomingLineages']+data['outgoingLineages'])+' lineage(s)'
-            name = data['name']
+            name = naming
             format = data['format']
             url = data['location']
 
