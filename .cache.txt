@@ -1,14 +1,14 @@
 mysql://mysql-kensu-demo.usnek.com:3306/demodb.source5
 source5 (demodb) :: Tableau Datasource :: kensuintegration site :: BBL_POC_Workflow_RO
 Tableau_Dashboard / Sheet1 / PredictMonth :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
+Tableau_Dashboard / PredictvsTotalIncome / PredictvsTotalIncome :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
+Tableau_Dashboard / Dashboard_Predict_1 / Dashboard_Predict :: Tableau Dashboard :: kensuintegration site :: Loan Acceptance Product
 demodb :: Tableau Datasource :: kensuintegration site :: Loan Acceptance Product
 Tableau_Dashboard / Sheet3 / Sheet 3 :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
 source5 (demodb) :: Tableau Datasource :: kensuintegration site :: test mysql 33
 mysql://mysql-kensu-demo.usnek.com:3306/demodb.customers
 customers (demodb) :: Tableau Datasource :: kensuintegration site :: Loan Acceptance Product
 DemoLive / Sheet1 / Sheet 1 :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
-Tableau_Dashboard / PredictvsTotalIncome / PredictvsTotalIncome :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
-Tableau_Dashboard / Dashboard_Predict_1 / Dashboard_Predict :: Tableau Dashboard :: kensuintegration site :: Loan Acceptance Product
 mysql://mysql-kensu-demo.usnek.com:3306/demodb.graduated
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/incomes
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/022020/personal_info.csv
