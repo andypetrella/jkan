@@ -24,6 +24,9 @@ class DAM(object):
         print("[timing]["+path+"] "+str(v.elapsed.total_seconds()))
         return v.json()
 
+    def url_for_ds(self, uuid):
+        return self.URL+"/data_source_details/"+uuid
+
 
     def get_datasources(self):
        return self.send_http("/api/services/v1/resources/datasources")
@@ -63,7 +66,7 @@ class DAM(object):
             notes = 'Used in '+str(data['incomingLineages']+data['outgoingLineages'])+' lineage(s)'
             name = naming
             format = data['format']
-            url = data['location']
+            url = self.url_for_ds(data['uuid'])
 
             self._wl(md_file, "---") \
                             ("schema: chicago") \
@@ -124,7 +127,7 @@ class DAM(object):
                     data = pds[element['uuid']]
                     name = data['name']
                     format = data['format']
-                    url = data['location']
+                    url = self.url_for_ds(data['uuid'])
                     
                     self._wl(md_file, '  - name: '+name+' \n    url: '+url+' \n    format : '+format)
 
