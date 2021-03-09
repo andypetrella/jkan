@@ -101,7 +101,7 @@ class DAM(object):
                             if field['columnName'] not in fields:
                                 fields.append(field['columnName'])
                     # FIXME FOR THE DEMO - PERF - WE STOP AFTER THE FIRST SCHEMA
-                    # break
+                    break
 
                 schema = '['+','.join(fields)+']'
                 
@@ -138,8 +138,6 @@ class DAM(object):
                                     ('maintainer:'+' User') \
                                     ('maintainer_email:'+' UserMail') \
                                     ("---")
-            # FIXME FOR THE DEMO - PERF - WE STOP AFTER THE FIRST SCHEMA
-            # break
 
 def work(dam, cache):
     dss = dam.get_datasources() 
