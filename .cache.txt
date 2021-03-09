@@ -11,7 +11,6 @@ customers (demodb) :: Tableau Datasource :: kensuintegration site :: Loan Accept
 source5 (demodb) :: Tableau Datasource :: kensuintegration site :: BBL_POC_Workflow_RO
 Tableau_Dashboard / PredictvsTotalIncome / PredictvsTotalIncome :: Tableau Sheet :: kensuintegration site :: Loan Acceptance Product
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/incomes
-file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/output/randomforest_3rd/h2o_binaries/randomforest_3rd
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/022020/personal_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/042020/personal_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/062020/income_info.csv
@@ -76,7 +75,6 @@ file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/predi
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/042020/backtest_df
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/082020/backtest_df
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/122020/backtest_df
-file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/output/decisiontree_1st/h2o_binaries/decisiontree_1st
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/022020/data_orig.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/042020/data_orig.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/062020/data_orig.csv
@@ -106,7 +104,6 @@ file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/consolidated_d
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/052020/backtest_df
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/092020/backtest_df
 file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/masterdata/lab/profile
-file:/Users/kensu/Customers/Kensu/LoanApproval/LAB/output/decisiontree_2nd/h2o_binaries/decisiontree_2nd
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/022020/income_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/042020/income_info.csv
 file:/Users/kensu/Customers/Kensu/LoanApproval/PROD/masterdata/prod/062020/personal_info.csv

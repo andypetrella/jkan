@@ -65,7 +65,7 @@ class DAM(object):
             organization = 'Lab'
             notes = 'Used in '+str(data['incomingLineages']+data['outgoingLineages'])+' lineage(s)'
             name = naming
-            format = data['format']
+            format = data['format'].replace(":", "-")
             url = self.url_for_ds(ds['uuid'])
 
             self._wl(md_file, "---") \
