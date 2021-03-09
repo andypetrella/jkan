@@ -149,7 +149,8 @@ def work(dam, cache):
         else:
             if 'Loan Acceptance Product' in ds['location']:
                 project_lab.append(ds)
-            elif 
+            elif 'demodb' in ds['location']:
+                project_lab.append(ds)
             elif 'LoanApproval' in ds['location']:
                 if '2020' not in ds['location']:
                     project_lab.append(ds)
