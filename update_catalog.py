@@ -21,7 +21,7 @@ class DAM(object):
     def send_http(self, path):
         import requests
         v = requests.get(self.URL+path, cookies=self.cookie,verify=False)
-        print("[timing]["+path+"]"+str(v.elapsed.total_seconds()))
+        print("[timing]["+path+"] "+str(v.elapsed.total_seconds()))
         return v.json()
 
 
@@ -83,17 +83,20 @@ class DAM(object):
         for el in ds:
             naming = el
             with open("_datasets/"+naming+".md","w+") as md_file:
+                pds = {}
+                for element in ds[el]:
+                    pds[element['uuid']] = self.get_datasource(element['uuid'])
 
+                
                 for element in ds[el]:
                 
-                    for any_schema in self.get_datasource(element['uuid'])['schemas']:
+                    for any_schema in pds[element['uuid']]['schemas']:
                         schemaID = any_schema['schemaId']
                         structure = self.get_schema(schemaID)
 
                         for field in structure['schema']:
                             if field['columnName'] not in fields:
                                 fields.append(field['columnName'])
-
 
                 schema = '['+','.join(fields)+']'
                 
@@ -105,7 +108,7 @@ class DAM(object):
                 outcome = 0
                 
                 for element in ds[el]:
-                    data = self.get_datasource(element['uuid'])
+                    data = pds[element['uuid']]
                     income += data['incomingLineages']
                     outcome+= data['outgoingLineages']
                 notes = 'Used in '+str(income+outcome)+' lineage(s)'
@@ -118,7 +121,7 @@ class DAM(object):
                                     ("resources:")
                 
                 for element in ds[el]:
-                    data = self.get_datasource(element['uuid'])
+                    data = pds[element['uuid']]
                     name = data['name']
                     format = data['format']
                     url = data['location']
@@ -130,6 +133,8 @@ class DAM(object):
                                     ('maintainer:'+' User') \
                                     ('maintainer_email:'+' UserMail') \
                                     ("---")
+            # FIXME FOR THE DEMO - PERF - WE STOP AFTER THE FIRST SCHEMA
+            # break
 
 def work(dam, cache):
     dss = dam.get_datasources() 
@@ -189,11 +194,17 @@ class Cache(object):
 
 import time, threading
 def main():
+    from timer import Timer
+    t = Timer()
+
     dam = DAM()
     cache = Cache()
     def run():
         print("Running at " + str(time.ctime()))
+        t.start()
         work(dam, cache)
+        t.stop()
+
         print("Done at " + str(time.ctime()))
         period_in_seconds = 10
         threading.Timer(period_in_seconds, run).start()
