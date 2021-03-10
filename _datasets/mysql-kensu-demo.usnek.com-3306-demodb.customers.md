@@ -2,7 +2,7 @@
 schema: chicago
 title: mysql-kensu-demo.usnek.com-3306-demodb.customers
 organization: Lab
-notes: Used in 17 lineage(s)
+notes: Used in 16 lineage(s)
 resources:
   - name: mysql-kensu-demo.usnek.com-3306-demodb.customers 
     url: https://www-demo102.usnek.com/data_source_details/k-ec95f1f7c47a10ca23edc52dc6a3909cec5d2d00160f05baf1a31e1c97602eeb 
