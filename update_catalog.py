@@ -210,9 +210,9 @@ def main():
             print("Running at " + str(time.ctime()))
             work(dam, cache)
             print("Done at " + str(time.ctime()))
-            period_in_seconds = 10
         except Exception as e:
             pass
+        period_in_seconds = 10
         threading.Timer(period_in_seconds, run).start()
     run()
 
